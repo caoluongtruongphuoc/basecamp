@@ -50,5 +50,19 @@ module.exports = {
             'css/styles'
         ],
         dsl: 'less'
+<<<<<<< HEAD
     }
+=======
+    },
+    basecamp: {
+        area: 'frontend',
+        name: 'AHT/basecamp',
+        locale: 'en_US',
+        files: [
+            'css/styles-m',
+            'css/styles-l'
+        ],
+        dsl: 'less'
+    },
+>>>>>>> 03d36fddc8ee34b3b4387b49f4f6f7e5ce8541ef
 };
