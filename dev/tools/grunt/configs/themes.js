@@ -50,9 +50,6 @@ module.exports = {
             'css/styles'
         ],
         dsl: 'less'
-<<<<<<< HEAD
-    }
-=======
     },
     basecamp: {
         area: 'frontend',
@@ -64,5 +61,4 @@ module.exports = {
         ],
         dsl: 'less'
     },
->>>>>>> 03d36fddc8ee34b3b4387b49f4f6f7e5ce8541ef
 };
