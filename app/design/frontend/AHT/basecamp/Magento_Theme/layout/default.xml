@@ -33,21 +33,8 @@
             <referenceBlock name="my-account-link" remove="true"/>
             <referenceBlock name="wish-list-link" remove="true"/>
         </referenceBlock>
-        <referenceBlock name="catalog.topnav">
-            <block class="Magento\Framework\View\Element\Html\Link" name="home-link" before="-">
-                <arguments>
-                    <argument name="label" xsi:type="string" translate="true">Home</argument>
-                    <argument name="path" xsi:type="string">/</argument>
-                    <argument name="class" xsi:type="string">level0</argument>
-                </arguments>
-            </block>
-            <block class="Magento\Framework\View\Element\Html\Link" name="contact-us-nav" after="-">
-                <arguments>
-                    <argument name="label" xsi:type="string" translate="true">Contact us</argument>
-                    <argument name="path" xsi:type="string">/</argument>
-                    <argument name="class" xsi:type="string">level0</argument>
-                </arguments>
-            </block>
-        </referenceBlock>
+        <referenceContainer name="page.top">
+            <block class="Magento\Framework\View\Element\Template" name="service-custom" template="Magento_Theme::header_service_custom.phtml" before="breadcrumbs"/>
+        </referenceContainer>
     </body>
 </page>

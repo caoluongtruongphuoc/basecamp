@@ -91,7 +91,7 @@
 
     .page-header {
         .lib-css(background-color, @header__background-color);
-        border-bottom: 1px solid @border-color__base;
+        //border-bottom: 1px solid @border-color__base;
         margin-bottom: @indent__base;
 
         .panel.wrapper {
@@ -141,7 +141,7 @@
 
     .logo {
         float: left;
-        margin: 0 0 @indent__s @indent__xl;
+        margin: 0 0 @indent__s 50px;
         max-width: 50%;
         position: relative;
         z-index: 5;
@@ -490,7 +490,20 @@
         font-size: 18px;
         font-weight: @font-weight__semibold;
         display: inline-block;
-        text-transform: capitalize;
+        
+        li.level0 {
+            margin: 0 4px 0 0;
+
+            &.active {
+                a.level-top {
+                    border: none;
+                }
+            }
+
+            a.level-top {
+                padding: 0 11px;
+            } 
+        }
     }
 
     .page-header {
@@ -666,7 +679,7 @@
        
         img {
             max-height: inherit;
-            width: 100%;
+            width: 80%;
         }
     }
 
@@ -753,5 +766,15 @@
                 }
             }
         }
+    }
+}
+
+.media-width(@extremum, @break) when (@extremum = 'min') and (@break = @screen__l) {
+    .logo img{
+        width: 100%;
+    }
+
+    .navigation ul {
+        margin-left: 19.4%;
     }
 }

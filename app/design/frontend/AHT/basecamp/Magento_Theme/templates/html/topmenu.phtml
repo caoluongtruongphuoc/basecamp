@@ -11,12 +11,33 @@
  */
 
 $columnsLimit = $block->getColumnsLimit() ?: 0;
-$_menuHtml = $block->getHtml('level-top', 'submenu', $columnsLimit)
+$_menuHtml = $block->getHtml('level-top', 'submenu', $columnsLimit);
+$baseUrl = $block->getBaseUrl();
 ?>
 
 <nav class="navigation" data-action="navigation">
     <ul data-mage-init='{"menu":{"responsive":true, "expanded":true, "position":{"my":"left top","at":"left bottom"}}}'>
+        <li class="level0 level-top ui-menu-item" role="presentation">
+            <a href="<?php echo $this->getBaseUrl(); ?>" class="level-top ui-corner-all"  role="menuitem">
+                <span><?= __("Home")?></span>
+            </a>
+        </li>
         <?= /* @noEscape */ $_menuHtml?>
         <?= $block->getChildHtml() ?>
+        <li class="level0 level-top ui-menu-item" role="presentation">
+            <a href="<?php echo $this->getBaseUrl().'voucher'; ?>" class="level-top ui-corner-all"  role="menuitem">
+                <span><?= __("Voucher")?></span>
+            </a>
+        </li>
+        <li class="level0 level-top ui-menu-item" role="presentation">
+            <a href="<?php echo $this->getBaseUrl().'brand'; ?>" class="level-top ui-corner-all"  role="menuitem">
+                <span><?= __("Brand")?></span>
+            </a>
+        </li>
+        <li class="level0 level-top ui-menu-item" role="presentation">
+            <a href="<?php echo $this->getBaseUrl().'contact'; ?>" class="level-top ui-corner-all"  role="menuitem">
+                <span><?= __("Contact us")?></span>
+            </a>
+        </li>
     </ul>
 </nav>
