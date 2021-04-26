@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Copyright © Magento, Inc. All rights reserved.
+ * See COPYING.txt for license details.
+ */
+-->
+<page layout="1column" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+    <body>
+        <!-- <move element="catalog.product.related" destination="product.info.details" after="product.attributes" /> -->
+        <move element="product.info.review" destination="product.info.price" after="product.info.sku" />
+        <move element="product.info.sku" destination="product.info.main" after="-"/>
+        <referenceBlock name="product.info.sku">
+            <arguments>
+                <argument name="at_label" xsi:type="string">Product code</argument>
+            </arguments>
+        </referenceBlock>
+        <referenceBlock name="product.info.details">                
+            <block class="Magento\Catalog\Block\Product\View\Description" name="delivery.tab" template="Magento_Catalog::product/view/tab_delivery.phtml" group="detailed_info">
+               <arguments>
+                   <argument name="title" xsi:type="string">Delivery &#38; Returns</argument>
+                   <argument name="sort_order" xsi:type="string">15</argument>
+               </arguments>
+            </block>
+        </referenceBlock>
+        <referenceContainer name="product.info.media">
+            <block class="Magento\Framework\View\Element\Template" name="images.video.button" template="Magento_Catalog::product/images_video_button.phtml" after="-" />     
+        </referenceContainer>
+    </body>
+</page>

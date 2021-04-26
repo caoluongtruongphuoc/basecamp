@@ -78,11 +78,7 @@ class Module implements
             include __DIR__ . '/../../../config/router.config.php',
             include __DIR__ . '/../../../config/di.config.php',
             include __DIR__ . '/../../../config/states.install.config.php',
-<<<<<<< HEAD
-            include __DIR__ . '/../../../config/languages.config.php',
-=======
             include __DIR__ . '/../../../config/languages.config.php'
->>>>>>> 03d36fddc8ee34b3b4387b49f4f6f7e5ce8541ef
         );
         // phpcs:enable
         return $result;
