@@ -1,0 +1,214 @@
+//
+//  Common
+//  _____________________________________________
+
+& when (@media-common = true) {
+
+    .banner-text {
+        position: absolute;
+        h2 {
+            margin-top: 0;
+            font-family: @font-family__caveat-brush;
+            color: @color-white;
+            text-transform: uppercase;
+            text-align: center;
+            .lib-css(transform, rotate(-5deg), 1);
+        }
+        .button {
+            font-family: @font-family__caveat-brush;
+            text-transform: uppercase;
+            cursor: pointer;
+            .lib-css(transform, rotate(-5deg), 1);
+            a {
+                color: @color-banner-button;
+                text-decoration: none;
+            }
+        }
+    }
+
+    .large-banner {
+        position: relative;
+        .banner-text {
+            max-width: 300px;
+            top: 47%;
+            left: 20%;
+            .lib-css(transform, translate(0, -50%), 1);
+            h2 {
+                font-size: 143px;
+                letter-spacing: -4px;
+                line-height: 110px;
+            }
+            .button {
+                font-size: 56px;
+                letter-spacing: -1px;
+                line-height: 31px;
+                padding-left: 21.6%;
+            }
+        }
+    }
+
+    .brand {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .categories {
+        display: flex;
+        margin: 0 -7px;
+        .item {
+            position: relative;
+            width: 100%/5;
+            padding: 7px;
+            p {
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                .lib-css(transform, translate(-50%, -50%), 1);
+                font-size: 48px;
+                letter-spacing: -1px;
+                color: @color-white;
+                font-weight: @font-weight__bold;
+                text-transform: uppercase;
+            }
+        }
+    }    
+
+    .banner-2 {
+        display: flex;
+        margin: 0 -10px;
+        .banner1,
+        .banner2 {
+            width: 100%/2;
+            position: relative;
+            padding: 10px;
+            .banner-text {
+                max-width: 450px;
+                h2 {
+                    font-size: 143px;
+                    letter-spacing: -4px;
+                    line-height: 110px;
+                    font-weight: @font-weight__regular;
+                }
+                .button {
+                    font-size: 56px;
+                    letter-spacing: -1px;
+                    line-height: 31px;
+                    font-weight: @font-weight__regular;
+                }
+            }
+        }
+
+        .banner1 .banner-text {
+            top: 15%;
+            left: 8%;
+        }
+
+        .banner2 .banner-text {
+            top: 24%;
+            left: 33%;
+            h2 {
+                margin-bottom: 10px;
+            }
+            .button {
+                padding-left: 24%;
+            }
+        }
+    }
+
+    .banner-3 {
+        display: flex;
+        margin: 0 -10px;
+        .banner1,
+        .banner2,
+        .banner3 {
+            width: 100%/3;
+            position: relative;
+            padding: 10px;
+            .banner-text {
+                max-width: 450px;
+                h2 {
+                    font-size: 143px;
+                    letter-spacing: -4px;
+                    line-height: 110px;
+                    font-weight: @font-weight__regular;
+                }
+                .button {
+                    font-size: 56px;
+                    line-height: 31px;
+                }
+            }
+        }
+
+        .banner1 .banner-text {
+            max-width: 300px;
+            top: 46%;
+            left: 26%;
+        }
+
+        .banner2 .banner-text {
+            max-width: 270px;
+            top: 31%;
+            left: 44%;
+        }
+
+        .banner3 .banner-text {
+            max-width: 300px;
+            top: 43%;
+            left: 18%;
+            h2 {
+                font-size: 80px;
+                letter-spacing: -4px;
+                line-height: 75px;
+                font-weight: @font-weight__regular;
+            }
+            .button {
+                padding-left: 28%;
+            }
+        }
+    }
+
+    .banner-4 {
+        position: relative;
+        .banner-text {
+            top: 20%;
+            left: 6%;
+            h2 {
+                font-size: 108px;
+                letter-spacing: -3px;
+                line-height: 50px;
+                .lib-css(transform, rotate(-2deg), 1);
+            }
+            .button {
+                font-size: 56px;
+                letter-spacing: -1px;
+                line-height: 55px;
+                background-color: @color-banner-button;
+                border-radius: 31px;
+                max-width: 242px;
+                max-height: 73px;
+                text-align: center;
+                margin-left: 36%;
+                a {
+                    color: @color-white;
+                }
+                .lib-css(transform, rotate(-2deg), 1);
+            }
+        }
+    }
+}
+
+//
+//  Dekstop
+//  _____________________________________________
+
+.media-width(@extremum, @break) when (@extremum = 'min') and (@break = @screen__m) {
+    
+}
+
+//
+//  Mobile
+//  _____________________________________________
+
+.media-width(@extremum, @break) when (@extremum = 'max') and (@break = @screen__m) {
+
+}

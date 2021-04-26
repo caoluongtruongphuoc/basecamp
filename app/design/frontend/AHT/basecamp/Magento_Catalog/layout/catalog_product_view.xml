@@ -7,6 +7,7 @@
 -->
 <page layout="1column" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
     <body>
+        <!-- <move element="catalog.product.related" destination="product.info.details" after="product.attributes" /> -->
         <move element="product.info.review" destination="product.info.price" after="product.info.sku" />
         <move element="product.info.sku" destination="product.info.main" after="-"/>
         <referenceBlock name="product.info.sku">
@@ -22,5 +23,8 @@
                </arguments>
             </block>
         </referenceBlock>
+        <referenceContainer name="product.info.media">
+            <block class="Magento\Framework\View\Element\Template" name="images.video.button" template="Magento_Catalog::product/images_video_button.phtml" after="-" />     
+        </referenceContainer>
     </body>
 </page>
