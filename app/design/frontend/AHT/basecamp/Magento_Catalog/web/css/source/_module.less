@@ -209,6 +209,10 @@
             margin-bottom: @indent__s + @indent__xs;
             width: 100%;
             position: relative;
+            .price-box {
+                display: flex;
+                flex-direction: column;
+            }
 
             .share-button {
                 position: absolute;
@@ -218,7 +222,6 @@
             }
 
             .price-box {
-                display: inline-block;
                 vertical-align: top;
                 width: auto;
 
@@ -252,6 +255,7 @@
             }
 
             .old-price {
+                order: 1;
                 .price-wrapper .price {
                     .lib-font-size(20);
                     font-weight: @font-weight__regular;
@@ -263,6 +267,7 @@
             }
 
             .special-price {
+                order: 2;
                 .price-wrapper .price {
                     font-size: 25px;
                     letter-spacing: -1px;
@@ -361,7 +366,13 @@
                 .action.tocart {
                     width: 100%;
                 }
+
+                .fieldset .field .label {
+                    font-weight: @font-weight__regular;
+                    letter-spacing: -1px;
+                }
             }
+
         }
 
         .reviews-actions .action.add {
@@ -451,7 +462,8 @@
 
         .old-price {
             font-size: 20px;
-            font-weight: @font-weight__light;
+            font-weight: @font-weight__regular;
+            color: @color-old-price;
 
             .price-container > span {
                 display: inline-block;
@@ -731,6 +743,17 @@
             }
         }
     }
+
+    .normal-price .price-label {
+        .lib-visually-hidden();
+    }
+
+    .old-price {
+        text-decoration: line-through;
+        .price-label {
+            text-decoration: line-through;
+        }
+    }
 }
 
 //
@@ -902,6 +925,12 @@
             min-height: inherit;
         }
     }
+
+    .product.attribute.description {
+        font-size: 18px;
+        color: @color-6c6b;
+        line-height: 32px;
+    }
 }
 
 //
@@ -968,6 +997,7 @@
             }
         }
     }
+
 }
 
 //

@@ -139,3 +139,16 @@
         padding: 10px 20px;
     }
 }
+
+//
+//  Desktop large
+//  _____________________________________________
+
+.media-width(@extremum, @break) when (@extremum = 'min') and (@break = @screen__xl) {
+    .catalog-product-view {
+        .page-main {
+            padding-left: 100px;
+            padding-right: 100px;
+        }
+    }
+}

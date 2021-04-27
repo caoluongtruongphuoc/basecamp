@@ -69,8 +69,11 @@
     .swatch {
         &-attribute {
             &-label {
-                font-weight: @font-weight__bold;
+                font-weight: @font-weight__regular;
                 position: relative;
+                color: @color-detail-title;
+                font-size: 14px;
+                letter-spacing: -1px;
 
                 &.required {
                     padding-right: @indent__s;
@@ -90,6 +93,7 @@
             &-selected-option {
                 .lib-css(color, @swatch-attribute-option__selected__color);
                 padding-left: 5px;
+                font-weight: @font-weight__bold;
             }
 
             &-options {
