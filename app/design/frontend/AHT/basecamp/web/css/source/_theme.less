@@ -18,6 +18,8 @@
 //  Fonts
 @icons__font-path: '@{baseDir}fonts/Luma-Icons';
 @icons__font-name: 'luma-icons';
+@font-caveat-brush: "CaveatBrush";
+@font-family__caveat-brush: @font-caveat-brush, @font-family__sans-serif;
 
 //  Color nesting
 @panel__background-color: @color-gray-light0;
@@ -27,8 +29,15 @@
 @h3__font-weight: @font-weight__semibold;
 @h3__margin-top: @indent__base;
 
+@h1__font-color: @color-detail-title;
+@h1__font-family: @heading__font-family__base;
+@h1__font-weight: @font-weight__regular;
+@h1__font-size-desktop: 36px;
+
 //  Links
-@link__color: @theme__color__primary-alt;
+@link__color: @color-5b;
+@link__text-decoration: underline;
+
 
 //  Focus
 @focus__color: @color-blue3;
@@ -46,9 +55,6 @@
 //  Layout grid
 //  ---------------------------------------------
 
-// Custom width
-@layout__max-width: 1820px;
-
 @total-columns: 24;
 
 //  Variables for layout columns
@@ -58,10 +64,16 @@
 @layout-column-checkout__width-left: 6;
 
 //
+//  Layout
+//  ---------------------------------------------
+@layout__max-width: 1820px;
+@layout-indent__width: 20px;
+
+//
 //  Navigation
 //  ---------------------------------------------
 
-@navigation__background: @color-white;
+@navigation__background: @color-gray94;
 @navigation-level0-item__active__color: @primary__color;
 
 @submenu-item__active__color: @navigation-level0-item__active__color;
@@ -72,16 +84,21 @@
 @submenu-desktop-item__active__color: @navigation-level0-item__active__color;
 
 //  Tabs
-@tab-control__color: @color-gray43;
-@tab-control__font-weight: @font-weight__regular;
-@tab-control__height: @indent__base*2;
-@tab-control__margin-right: -1px;
+@tab-control__color: @color-6c6b;
+@tab-control__font-size: 18px;
+@tab-control__font-weight: @font-weight__semibold;
+@tab-control__height: 48px;
+@tab-control__margin-right: 0.4812%;
 @tab-control__padding-top: 1px;
 @tab-control__padding-right: 35px;
+@tab-control__background-color: @color-d;
+@tab-control__active__background-color: @color-4f;
+@tab-control__active__color: @color-white;
 
 //  Tabs content
 @tab-content__padding-top: 35px;
 @tab-content__padding-right: @tab-control__padding-right;
+@tab-content__background-color: @color-white;
 
 //
 //  Accordion
@@ -106,25 +123,32 @@
 @accordion-content__border: false;
 @accordion-content__margin: 0;
 @accordion-content__padding: @indent__s @indent__s @indent__l;
+@accordion-content__background-color: @color-white;
 
 //
 //  Buttons
 //  ---------------------------------------------
 
 @button__font-weight: @font-weight__semibold;
+@button__border-radius: 5px;
 
 //  Default = secondary button
-@button__background: @color-gray-darken0;
-@button__border: 1px solid @border-color__base;
+@button__color: @color-5b;
+@button__background: @color-default-button;
+@button__border: 1px solid @color-default-button;
 @button__hover__color: @button__color;
 @button__hover__background: darken(@button__background, 5%);
 @button__active__background: @color-gray-darken1;
 
 //  Primary button
 @button-primary__hover__color: @color-white;
-@button-primary__active__background: @link__hover__color;
-@button-primary__active__border: 1px solid @link__hover__color;
+@button-primary__active__background: @color-primary-button;
 @button-primary__active__color: @color-white;
+@button-primary__font-weight: @font-weight__bold;
+@button-primary__background: @color-primary-button;
+@button-primary__hover__background: @color-primary-button;
+@button-primary__border: none;
+@button-primary__hover__border: none;
 
 //  Button with icon
 @button-icon__line-height: @icon-font__line-height;
@@ -163,7 +187,10 @@
 //
 //  Forms
 //  ---------------------------------------------
-
+@form-element-input__border-color: @color-border-form;
+@form-field-label__color: @color-detail-title;
+@form-field-label__font-size: 14px;
+@form-field-label__font-weight: @font-weight__regular;
 
 //  Select
 @select__background: @form-element-input__background url('../images/select-bg.svg') no-repeat 100% 45%;
@@ -223,6 +250,9 @@
 
 @rating-icon__font-size: 16px;
 @rating-icon__letter-spacing: 2px;
+@rating-icon__active__color: @color-rating;
+
+
 
 //
 //  Dropdowns
@@ -248,8 +278,8 @@
 @breadcrumbs-icon__font-size: 10px;
 @breadcrumbs-icon__font-margin: 0 @indent__s;
 
-@breadcrumbs-current__color: @color-gray-middle5;
-@breadcrumbs-link__color: @link__color;
+@breadcrumbs-current__color: @color-black;
+@breadcrumbs-link__color: @color-black;
 @breadcrumbs-link__visited__color: @breadcrumbs-link__color;
 @breadcrumbs-link__hover__color: @breadcrumbs-link__color;
 @breadcrumbs-link__active__color: @breadcrumbs-link__color;
@@ -297,6 +327,3 @@
 //  ---------------------------------------------
 
 @copyright__background-color: @color-gray-middle4;
-
-
-
