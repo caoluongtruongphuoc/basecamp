@@ -17,10 +17,10 @@
 
     button {
         &:not(.primary) {
-            .lib-css(box-shadow, @button__shadow);
+            //.lib-css(box-shadow, @button__shadow);
 
             &:active {
-                .lib-css(box-shadow, @button__shadow-active);
+            //    .lib-css(box-shadow, @button__shadow-active);
             }
         }
     }
@@ -40,6 +40,7 @@
     }
 
     .action.primary {
-        .lib-button-primary();
+        .lib-button-primary(
+        );
     }
 }
