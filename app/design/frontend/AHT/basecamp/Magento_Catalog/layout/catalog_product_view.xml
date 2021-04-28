@@ -15,6 +15,11 @@
                 <argument name="at_label" xsi:type="string">Product code</argument>
             </arguments>
         </referenceBlock>
+        <referenceBlock name="product.info.description">
+            <arguments>
+                <argument name="title" translate="true" xsi:type="string">Overview</argument>
+            </arguments>
+        </referenceBlock>
         <referenceBlock name="product.info.details">                
             <block class="Magento\Catalog\Block\Product\View\Description" name="delivery.tab" template="Magento_Catalog::product/view/tab_delivery.phtml" group="detailed_info">
                <arguments>

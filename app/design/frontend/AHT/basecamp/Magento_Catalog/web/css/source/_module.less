@@ -11,7 +11,7 @@
 //  _____________________________________________
 
 @product-info-price: @color-gray34;
-@product-h1-margin-bottom-desktop: @indent__s + @indent__xs;
+@product-h1-margin-bottom-desktop: 5px;
 @product-price__muted__color: @color-gray40;
 
 //
@@ -112,7 +112,6 @@
     //  -----------------------------------------
 
     .product.media {
-        max-height: 860px;
         .product.photo .photo.image {
             &:extend(.abs-adaptive-images-centered);
         }
@@ -367,10 +366,18 @@
                     width: 100%;
                 }
 
-                .fieldset .field .label {
-                    font-weight: @font-weight__regular;
-                    letter-spacing: -1px;
+                .fieldset .field {
+                    .label {
+                        font-weight: @font-weight__regular;
+                        letter-spacing: -1px;
+                        margin: 0 0 14px;
+                    }
+
+                    .control {
+                        margin: 0 -5px;
+                    }
                 }
+                
             }
 
         }
@@ -771,6 +778,17 @@
             .lib-vendor-prefix-order(-1);
         }
     }
+
+    .product-info-main .product-info-price .old-price .price-wrapper .price {
+        font-size: 14px;
+    }
+
+    .product-reviews-summary {
+        margin-bottom: 10px;
+        .reviews-actions {
+            margin-top: 5px;
+        }
+    }
 }
 
 //
@@ -808,6 +826,9 @@
         .page-title-wrapper {
             h1 {
                 .lib-css(margin-bottom, @product-h1-margin-bottom-desktop);
+                letter-spacing: -1px;
+                margin-left: -6px;
+                margin-top: 5px;
             }
         }
 
@@ -859,7 +880,6 @@
 
     .product.media {
         float: left;
-        margin-bottom: 60px;
     }
 
     .page-layout-1column {
@@ -868,7 +888,7 @@
         }
 
         .product.media {
-            width: 64%;
+            width: 63.6%;
         }
     }
 
@@ -959,11 +979,13 @@
     .product.info.detailed {
         float: left;
         width: 64%;
+        margin-left: -5px;
     }
 
     .block.related {
         float: right;
-        width: 32%;
+        width: 31.5%;
+        margin-top: 15px;
         .item.product.product-item {
             width: 50%;
         }
