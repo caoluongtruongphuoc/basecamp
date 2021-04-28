@@ -3,7 +3,6 @@
 //  _____________________________________________
 
 & when (@media-common = true) {
-
     .banner-text {
         position: absolute;
         h2 {
@@ -12,13 +11,13 @@
             color: @color-white;
             text-transform: uppercase;
             text-align: center;
-            .lib-css(transform, rotate(-5deg), 1);
+            .lib-rotate(-5deg);
         }
         .button {
             font-family: @font-family__caveat-brush;
             text-transform: uppercase;
             cursor: pointer;
-            .lib-css(transform, rotate(-5deg), 1);
+            .lib-rotate(-5deg);
             a {
                 color: @color-banner-button;
                 text-decoration: none;
@@ -29,21 +28,9 @@
     .large-banner {
         position: relative;
         .banner-text {
-            max-width: 300px;
             top: 47%;
             left: 20%;
             .lib-css(transform, translate(0, -50%), 1);
-            h2 {
-                font-size: 143px;
-                letter-spacing: -4px;
-                line-height: 110px;
-            }
-            .button {
-                font-size: 56px;
-                letter-spacing: -1px;
-                line-height: 31px;
-                padding-left: 21.6%;
-            }
         }
     }
 
@@ -57,14 +44,12 @@
         margin: 0 -7px;
         .item {
             position: relative;
-            width: 100%/5;
             padding: 7px;
             p {
                 position: absolute;
                 top: 50%;
                 left: 50%;
                 .lib-css(transform, translate(-50%, -50%), 1);
-                font-size: 48px;
                 letter-spacing: -1px;
                 color: @color-white;
                 font-weight: @font-weight__bold;
@@ -78,23 +63,9 @@
         margin: 0 -10px;
         .banner1,
         .banner2 {
-            width: 100%/2;
             position: relative;
             padding: 10px;
             .banner-text {
-                max-width: 450px;
-                h2 {
-                    font-size: 143px;
-                    letter-spacing: -4px;
-                    line-height: 110px;
-                    font-weight: @font-weight__regular;
-                }
-                .button {
-                    font-size: 56px;
-                    letter-spacing: -1px;
-                    line-height: 31px;
-                    font-weight: @font-weight__regular;
-                }
             }
         }
 
@@ -121,9 +92,111 @@
         .banner1,
         .banner2,
         .banner3 {
-            width: 100%/3;
+            img {
+                width: 100%;
+            }
             position: relative;
             padding: 10px;
+        }
+
+        .banner1 .banner-text {
+            top: 46%;
+            left: 26%;
+        }
+
+        .banner2 .banner-text {
+            top: 31%;
+            left: 44%;
+        }
+
+        .banner3 .banner-text {
+            top: 43%;
+            left: 18%;
+        }
+    }
+
+    .banner-4 {
+        position: relative;
+        .banner-text {
+            top: 20%;
+            left: 6%;
+            h2 {
+                .lib-rotate(-2deg);
+            }
+            .button {
+                background-color: @color-banner-button;
+                border-radius: 31px;
+                max-height: 73px;
+                text-align: center;
+                margin-left: 36%;
+                a {
+                    color: @color-white;
+                }
+                .lib-rotate(-2deg);
+            }
+        }
+    }
+}
+
+//
+//  Dekstop large
+//  _____________________________________________
+
+.media-width(@extremum, @break) when (@extremum = 'min') and (@break = @screen__xl) {
+    .large-banner {
+        .banner-text {
+            max-width: 300px;
+            h2 {
+                font-size: 143px;
+                letter-spacing: -4px;
+                line-height: 110px;
+            }
+            .button {
+                font-size: 56px;
+                letter-spacing: -1px;
+                line-height: 31px;
+                padding-left: 21.6%;
+            }
+        }
+    }
+
+    .categories {
+        .item {
+            width: 100%/5;
+            p {
+                font-size: 48px;
+                letter-spacing: -1px;
+            }
+        }
+    }    
+
+    .banner-2 {
+        .banner1,
+        .banner2 {
+            width: 100%/2;
+            .banner-text {
+                max-width: 450px;
+                h2 {
+                    font-size: 143px;
+                    letter-spacing: -4px;
+                    line-height: 110px;
+                    font-weight: @font-weight__regular;
+                }
+                .button {
+                    font-size: 56px;
+                    letter-spacing: -1px;
+                    line-height: 31px;
+                    font-weight: @font-weight__regular;
+                }
+            }
+        }
+    }
+
+    .banner-3 {
+        .banner1,
+        .banner2,
+        .banner3 {
+            width: 100%/3;
             .banner-text {
                 max-width: 450px;
                 h2 {
@@ -139,22 +212,7 @@
             }
         }
 
-        .banner1 .banner-text {
-            max-width: 300px;
-            top: 46%;
-            left: 26%;
-        }
-
-        .banner2 .banner-text {
-            max-width: 270px;
-            top: 31%;
-            left: 44%;
-        }
-
         .banner3 .banner-text {
-            max-width: 300px;
-            top: 43%;
-            left: 18%;
             h2 {
                 font-size: 80px;
                 letter-spacing: -4px;
@@ -165,33 +223,144 @@
                 padding-left: 28%;
             }
         }
+
+        .banner1 .banner-text {
+            max-width: 300px;
+        }
+
+        .banner2 .banner-text {
+            max-width: 270px;
+        }
+
+        .banner3 .banner-text {
+            max-width: 300px;
+        }
     }
 
     .banner-4 {
-        position: relative;
         .banner-text {
-            top: 20%;
-            left: 6%;
             h2 {
                 font-size: 108px;
                 letter-spacing: -3px;
                 line-height: 50px;
-                .lib-css(transform, rotate(-2deg), 1);
             }
             .button {
+                max-width: 242px;
                 font-size: 56px;
                 letter-spacing: -1px;
                 line-height: 55px;
-                background-color: @color-banner-button;
-                border-radius: 31px;
-                max-width: 242px;
-                max-height: 73px;
-                text-align: center;
-                margin-left: 36%;
-                a {
-                    color: @color-white;
+            }
+        }
+    }
+}
+
+.media-width(@extremum, @break) when (@extremum = 'min') and (@break = @screen__l) {
+    .large-banner {
+        .banner-text {
+            max-width: 165px;
+            h2 {
+                font-size: 80px;
+                letter-spacing: -4px;
+                line-height: 60px;
+            }
+            .button {
+                font-size: 35px;
+                letter-spacing: -1px;
+                line-height: 10px;
+                padding-left: 21.6%;
+            }
+        }
+    }
+
+    .categories {
+        .item {
+            width: 100%/5;
+            p {
+                font-size: 28px;
+                letter-spacing: -1px;
+            }
+        }
+    }    
+
+    .banner-2 {
+        .banner1,
+        .banner2 {
+            width: 100%/2;
+            .banner-text {
+                max-width: 240px;
+                h2 {
+                    font-size: 80px;
+                    line-height: 60px;
+                    letter-spacing: -4px;
+                    font-weight: @font-weight__regular;
                 }
-                .lib-css(transform, rotate(-2deg), 1);
+                .button {
+                    font-size: 32px;
+                    letter-spacing: -1px;
+                    line-height: 18px;
+                    font-weight: @font-weight__regular;
+                }
+            }
+        }
+    }
+
+    .banner-3 {
+        .banner1,
+        .banner2,
+        .banner3 {
+            width: 100%/3;
+            .banner-text {
+                max-width: 155px;
+                h2 {
+                    font-size: 80px;
+                    letter-spacing: -4px;
+                    line-height: 60px;
+                    font-weight: @font-weight__regular;
+                }
+                .button {
+                    font-size: 32px;
+                    line-height: 5px;
+                }
+            }
+        }
+
+        .banner3 .banner-text {
+            h2 {
+                font-size: 51px;
+                letter-spacing: -4px;
+                line-height: 40px;
+                font-weight: @font-weight__regular;
+            }
+            .button {
+                padding-left: 28%;
+            }
+        }
+
+        .banner1 .banner-text {
+            max-width: 175px;
+        }
+
+        .banner2 .banner-text {
+            max-width: 151px;
+        }
+
+        .banner3 .banner-text {
+            max-width: 180px;
+        }
+    }
+
+    .banner-4 {
+        .banner-text {
+            h2 {
+                font-size: 64px;
+                letter-spacing: -3px;
+                line-height: 30px;
+            }
+            .button {
+                max-width: 170px;
+                font-size: 40px;
+                letter-spacing: -1px;
+                line-height: 40px;
             }
         }
     }
@@ -202,7 +371,115 @@
 //  _____________________________________________
 
 .media-width(@extremum, @break) when (@extremum = 'min') and (@break = @screen__m) {
-    
+    .large-banner {
+        .banner-text {
+            max-width: 165px;
+            h2 {
+                font-size: 80px;
+                letter-spacing: -4px;
+                line-height: 60px;
+            }
+            .button {
+                font-size: 35px;
+                letter-spacing: -1px;
+                line-height: 10px;
+                padding-left: 21.6%;
+            }
+        }
+    }
+
+    .categories {
+        .item {
+            width: 100%/5;
+            p {
+                font-size: 20px;
+                letter-spacing: -1px;
+            }
+        }
+    }    
+
+    .banner-2 {
+        .banner1,
+        .banner2 {
+            width: 100%/2;
+            .banner-text {
+                max-width: 170px;
+                h2 {
+                    font-size: 60px;
+                    line-height: 50px;
+                    letter-spacing: -4px;
+                    font-weight: @font-weight__regular;
+                }
+                .button {
+                    font-size: 25px;
+                    letter-spacing: -1px;
+                    line-height: 12px;
+                    font-weight: @font-weight__regular;
+                }
+            }
+        }
+    }
+
+    .banner-3 {
+        .banner1,
+        .banner2,
+        .banner3 {
+            width: 100%/3;
+            .banner-text {
+                max-width: 155px;
+                h2 {
+                    font-size: 53px;
+                    letter-spacing: -4px;
+                    line-height: 42px;
+                    font-weight: @font-weight__regular;
+                }
+                .button {
+                    font-size: 22px;
+                    line-height: 1px;
+                }
+            }
+        }
+
+        .banner3 .banner-text {
+            h2 {
+                font-size: 38px;
+                letter-spacing: -4px;
+                line-height: 32px;
+                font-weight: @font-weight__regular;
+            }
+            .button {
+                padding-left: 28%;
+            }
+        }
+
+        .banner1 .banner-text {
+            max-width: 100px;
+        }
+
+        .banner2 .banner-text {
+            max-width: 104px;
+        }
+
+        .banner3 .banner-text {
+            max-width: 130px;
+        }
+    }
+
+    .banner-4 {
+        .banner-text {
+            h2 {
+                font-size: 45px;
+                letter-spacing: -3px;
+                line-height: 15px;
+            }
+            .button {
+                max-width: 115px;
+                font-size: 24px;
+                letter-spacing: -1px;
+                line-height: 28px;
+            }
+        }
+    }
 }
 
 //
@@ -211,4 +488,112 @@
 
 .media-width(@extremum, @break) when (@extremum = 'max') and (@break = @screen__m) {
 
+}
+
+.media-width(@extremum, @break) when (@extremum = 'max') and (@break = @screen__s) {
+    .large-banner {
+        .banner-text {
+            max-width: 165px;
+            h2 {
+                font-size: 44px;
+                letter-spacing: -4px;
+                line-height: 24px;
+            }
+            .button {
+                font-size: 24px;
+                letter-spacing: -1px;
+                line-height: 10px;
+                padding-left: 21.6%;
+            }
+        }
+    }
+
+    .categories {
+        .item {
+            width: 100%/5;
+            p {
+                font-size: 15px;
+                letter-spacing: -1px;
+            }
+        }
+    }    
+
+    .banner-2 {
+        flex-wrap: wrap;
+        .banner1,
+        .banner2 {
+            width: 100%;
+            .banner-text {
+                max-width: 200px;
+                h2 {
+                    font-size: 60px;
+                    line-height: 50px;
+                    letter-spacing: -4px;
+                    font-weight: @font-weight__regular;
+                }
+                .button {
+                    font-size: 28px;
+                    letter-spacing: -1px;
+                    line-height: 12px;
+                    font-weight: @font-weight__regular;
+                }
+            }
+        }
+    }
+
+    .banner-3 {
+        flex-wrap: wrap;
+        .banner1,
+        .banner2,
+        .banner3 {
+            width: 100%;
+            .banner-text {
+                max-width: 155px;
+                h2 {
+                    font-size: 80px;
+                    letter-spacing: -4px;
+                    line-height: 80px;
+                    font-weight: @font-weight__regular;
+                }
+                .button {
+                    font-size: 32px;
+                    line-height: 1px;
+                }
+            }
+        }
+
+        .banner3 .banner-text {
+            max-width: 245px;
+            h2 {
+                font-size: 63px;
+                letter-spacing: -4px;
+                line-height: 58px;
+                font-weight: @font-weight__regular;
+            }
+            .button {
+                padding-left: 28%;
+            }
+        }
+
+    }
+
+    .banner-4 {
+        .banner-text {
+            width: 92%;
+            h2 {
+                font-size: 31px;
+                letter-spacing: -3px;
+                line-height: 28px;
+                float: left;
+            }
+            .button {
+                min-width: 95px;
+                font-size: 21px;
+                letter-spacing: -1px;
+                line-height: 28px;
+                float: right;
+                margin-left: 0;
+            }
+        }
+    }
 }
