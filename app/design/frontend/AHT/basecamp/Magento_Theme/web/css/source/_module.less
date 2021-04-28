@@ -46,7 +46,7 @@
 @h1__margin-bottom__desktop: @indent__xl;
 
 //  Footer
-@footer__background-color: @color-gray-light01;
+@footer__background-color: @color-footer-bg;
 @footer-links-separator-border-color: @color-gray-light4;
 @footer-links-color: @color-gray34;
 @footer-links-color-hover: @color-gray20;
@@ -239,7 +239,7 @@
     .footer {
         &.content {
             border-top: 1px solid @footer-links-separator-border-color;
-            padding-top: @indent__base;
+            //padding-top: @indent__base;
 
             ul:extend(.abs-reset-list all) {
             }
@@ -281,8 +281,9 @@
     }
 
     .copyright {
-        .lib-css(background-color, @copyright__background-color);
+        //.lib-css(background-color, @copyright__background-color);
         .lib-css(color, @color-white);
+        .lib-font-size(18);
         box-sizing: border-box;
         display: block;
         padding: @indent__s;
@@ -473,6 +474,10 @@
     .cms-page-view .page-main {
         padding-top: 0;
         position: relative;
+    }
+
+    .copyright {
+        color: @color-black;
     }
 }
 
@@ -700,7 +705,7 @@
         .lib-css(background, @footer__background-color);
         margin-top: auto;
         padding-bottom: @indent__m;
-
+        border-top: 18px solid @color-white-dark-smoke;
         .switcher {
             .options {
                 ul.dropdown {
