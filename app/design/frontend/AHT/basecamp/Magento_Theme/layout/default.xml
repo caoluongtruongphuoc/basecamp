@@ -36,5 +36,11 @@
         <referenceContainer name="page.top">
             <block class="Magento\Framework\View\Element\Template" name="service-custom" template="Magento_Theme::header_service_custom.phtml" before="breadcrumbs"/>
         </referenceContainer>
+        <referenceContainer name="footer">
+            <referenceBlock name="footer_links" remove="true"/>
+            <referenceBlock name="form.subscribe" remove="true"/>
+            <block class="Magento\Framework\View\Element\Template" name="footer.custom" template="Magento_Theme::footer_content_custom.phtml" />
+        </referenceContainer>
+        <move element="copyright" destination="footer" after="footer.custom"/>
     </body>
 </page>

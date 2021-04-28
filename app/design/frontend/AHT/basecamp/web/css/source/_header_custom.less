@@ -22,17 +22,13 @@
 //  _____________________________________________
 
 .media-width(@extremum, @break) when (@extremum = 'min') and (@break = @screen__m) {
-    .justify-content(@_jc) {
-        -webkit-box-pack: @_jc;
-        -ms-flex-pack:@_jc;
-        justify-content: @_jc;
-    }
+    
     .service-wrapper {
         background-color: @color-gray-darken1;
         .service-container {
             width: 100%;
             .lib-vendor-prefix-display();
-            .justify-content(space-between);
+            .lib-css(justify-content, space-between, 1);
             padding-top: 5.5px;
             padding-bottom: 5.5px;
             a {

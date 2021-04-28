@@ -1,0 +1,155 @@
+<div id="accordion-footer">
+    <div data-role="collapsible">
+        <div data-role="trigger" class="list-title">
+            <div class="text-big">BROWSE BASECAMP</div>
+        </div>
+    </div>
+    <div data-role="content" class="list-content">
+        <?php
+            echo $block->getLayout()->createBlock('Magento\Cms\Block\Block')->setBlockId('footer_browse')->toHtml();
+        ?>
+    </div>
+    
+    <div data-role="collapsible">
+        <div data-role="trigger" class="list-title">
+            <div class="text-big">MY ACCOUNT</div>
+        </div>
+    </div>
+    <div data-role="content" class="list-content">
+        <?php
+            echo $block->getLayout()->createBlock('Magento\Cms\Block\Block')->setBlockId('footer_account')->toHtml();
+        ?>
+    </div>
+
+    <div data-role="collapsible">
+        <div data-role="trigger" class="list-title">
+            <div class="text-big">TERMS AND CONDITIONS</div>
+        </div>
+    </div>
+    <div data-role="content" class="list-content">
+        <?php
+            echo $block->getLayout()->createBlock('Magento\Cms\Block\Block')->setBlockId('footer_terms')->toHtml();
+        ?>
+    </div>
+
+
+    <div data-role="collapsible">
+        <div data-role="trigger" class="list-title">
+            <div class="text-big">WE ARE LOCATED AT:</div>
+        </div>
+    </div>
+    <div data-role="content" class="list-content">
+        <?php
+            echo $block->getLayout()->createBlock('Magento\Cms\Block\Block')->setBlockId('footer_info')->toHtml();
+        ?>
+    </div>
+
+    <div data-role="collapsible">
+        <div data-role="trigger" class="list-title">
+            <div class="text-big">STAY CONNECTED</div>
+        </div>
+    </div>
+    <div data-role="content" class="list-content">
+        <?php
+            echo $block->getLayout()->createBlock('Magento\Cms\Block\Block')->setBlockId('footer_social')->toHtml();
+        ?>
+    </div>
+    <div data-role="collapsible">
+        <div data-role="trigger" class="list-title">
+            <div class="text-big">WE ACCEPT</div>
+        </div>
+    </div>
+    <div data-role="content" class="list-content">
+        <?php
+            echo $block->getLayout()->createBlock('Magento\Cms\Block\Block')->setBlockId('footer_pay')->toHtml();
+        ?>
+    </div>
+</div>
+<div class="footer-desktop">
+    <!-- cot 1 -->
+    <div class="column-custom">
+        <div class="link-item">
+           <div class="text-big">BROWSE BASECAMP</div>
+           <div class="link-content">
+            <?php
+                echo $block->getLayout()->createBlock('Magento\Cms\Block\Block')->setBlockId('footer_browse')->toHtml();
+            ?>
+            </div>
+        </div>
+
+        <div class="link-item social-logo">
+            <div class="text-big">STAY CONNECTED</div>
+            <div class="link-content">
+            <?php
+                echo $block->getLayout()->createBlock('Magento\Cms\Block\Block')->setBlockId('footer_social')->toHtml();
+            ?>
+            </div>
+        </div>  
+    </div>
+    <!-- end cot 1 -->
+    <!-- cot 2  -->
+    <div class="column-custom">
+        <div class="link-item">
+            <div class="text-big">MY ACCOUNT</div>
+            <div class="link-content">
+            <?php
+                echo $block->getLayout()->createBlock('Magento\Cms\Block\Block')->setBlockId('footer_account')->toHtml();
+            ?>
+            </div>
+        </div>
+        
+        <div class="link-item pay-img">
+            <div class="text-big">WE ACCEPT</div>
+            <div class="link-content">
+            <?php
+                echo $block->getLayout()->createBlock('Magento\Cms\Block\Block')->setBlockId('footer_pay')->toHtml();
+            ?>
+            </div>
+        </div>
+        
+    </div>    
+    <!-- end cot 2 -->
+    <!-- cot 3 -->
+    <div class="column-custom">
+        <div class="link-item">
+    
+            <div class="text-big">TERMS AND CONDITIONS</div>
+        
+            <div class="link-content">
+            <?php
+                echo $block->getLayout()->createBlock('Magento\Cms\Block\Block')->setBlockId('footer_terms')->toHtml();
+            ?>
+        </div>
+        </div>
+        
+    </div>
+    <!-- end cot 3 -->
+    <!-- cot 4 -->
+    <div class="column-custom">
+        <div class="link-item store-info">
+            <div class="text-big">WE ARE LOCATED AT:</div>
+            <div class="link-content">
+            <?php
+                echo $block->getLayout()->createBlock('Magento\Cms\Block\Block')->setBlockId('footer_info')->toHtml();
+            ?>
+            </div>
+        </div>
+        
+    </div>
+    <!-- end cot 4 -->
+</div>
+<script>
+    require(['jquery','accordion'], function ($) {
+    // collapse links    
+        $("#accordion-footer").accordion({
+            "openedState": "active",
+            "collapsible": true,
+            "active": [],
+            "multipleCollapsible": true,
+            "icons": {
+                "header": "fas fa-chevron-right", 
+                "activeHeader": "fas fa-chevron-down"
+            }
+        });
+});
+</script>
