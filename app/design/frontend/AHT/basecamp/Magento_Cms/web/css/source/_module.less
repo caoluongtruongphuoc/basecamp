@@ -27,16 +27,21 @@
 
     .large-banner {
         position: relative;
+        img {
+            width: 100%;
+        }
         .banner-text {
             top: 47%;
-            left: 20%;
+            left: 18.5%;
             .lib-css(transform, translate(0, -50%), 1);
         }
     }
 
     .brand {
-        margin-left: auto;
+        width: fit-content;
+        margin-left: 6%;
         margin-right: auto;
+        margin-top: -3px;
     }
 
     .categories {
@@ -60,18 +65,18 @@
 
     .banner-2 {
         display: flex;
-        margin: 0 -10px;
+        margin: 13px -10px 5px -10px;
         .banner1,
         .banner2 {
             position: relative;
-            padding: 10px;
+            padding: 0 10px;
             .banner-text {
             }
         }
 
         .banner1 .banner-text {
-            top: 15%;
-            left: 8%;
+            top: 17%;
+            left: 7%;
         }
 
         .banner2 .banner-text {
@@ -111,15 +116,21 @@
 
         .banner3 .banner-text {
             top: 43%;
-            left: 18%;
+            left: 13%;
+            letter-spacing: -1px;
+
+            .button {
+                margin-top: -2%;
+            }
         }
     }
 
     .banner-4 {
         position: relative;
+        margin-top: 12px;
         .banner-text {
-            top: 20%;
-            left: 6%;
+            top: 25%;
+            left: 7%;
             h2 {
                 .lib-rotate(-2deg);
             }
@@ -132,7 +143,7 @@
                 a {
                     color: @color-white;
                 }
-                .lib-rotate(-2deg);
+                .lib-rotate(-5deg);
             }
         }
     }
@@ -150,12 +161,13 @@
                 font-size: 143px;
                 letter-spacing: -4px;
                 line-height: 110px;
+                margin-bottom: 13px;
             }
             .button {
                 font-size: 56px;
                 letter-spacing: -1px;
                 line-height: 31px;
-                padding-left: 21.6%;
+                padding-left: 27.6%;
             }
         }
     }
@@ -230,6 +242,13 @@
 
         .banner2 .banner-text {
             max-width: 270px;
+
+            .button {
+                margin-right: -10%;
+                margin-left: 12%;
+                letter-spacing: -1px;
+                margin-top: -2%;
+            }
         }
 
         .banner3 .banner-text {
@@ -248,7 +267,8 @@
                 max-width: 242px;
                 font-size: 56px;
                 letter-spacing: -1px;
-                line-height: 55px;
+                line-height: 57px;
+                padding: 0 2px;
             }
         }
     }
