@@ -3,6 +3,9 @@
 //  _____________________________________________
 
 & when (@media-common = true) {
+    .slick-slide {
+        padding: 7px;
+    }
     .banner-text {
         position: absolute;
         h2 {
@@ -49,7 +52,6 @@
         margin: 0 -7px;
         .item {
             position: relative;
-            padding: 7px;
             p {
                 position: absolute;
                 top: 50%;
@@ -396,7 +398,7 @@
         .item {
             width: 100%/5;
             p {
-                font-size: 28px;
+                font-size: 35px;
                 letter-spacing: -1px;
             }
         }
@@ -514,7 +516,7 @@
         .item {
             width: 100%/5;
             p {
-                font-size: 20px;
+                font-size: 25px;
                 letter-spacing: -1px;
             }
         }
@@ -655,7 +657,109 @@
             }  
         }
     }
+.large-banner {
+        .banner-text {
+            max-width: 127px;
+            h2 {
+                font-size: 44px;
+                letter-spacing: -4px;
+                line-height: 34px;
+            }
+            .button {
+                font-size: 24px;
+                letter-spacing: -1px;
+                line-height: 10px;
+                padding-left: 21.6%;
+            }
+        }
+    }
 
+    .categories {
+        .item {
+            width: 100%/5;
+            p {
+                font-size: 25px;
+                letter-spacing: -1px;
+            }
+        }
+    }    
+
+    .banner-2 {
+        .banner1,
+        .banner2 {
+            width: 100%/2;
+            .banner-text {
+                max-width: 200px;
+                h2 {
+                    font-size: 50px;
+                    line-height: 50px;
+                    letter-spacing: -4px;
+                    font-weight: @font-weight__regular;
+                }
+                .button {
+                    font-size: 28px;
+                    letter-spacing: -1px;
+                    line-height: 12px;
+                    font-weight: @font-weight__regular;
+                }
+            }
+        }
+    }
+
+    .banner-3 {
+        .banner1,
+        .banner2,
+        .banner3 {
+            width: 100%/3;
+            .banner-text {
+                max-width: 118px;
+                h2 {
+                    font-size: 54px;
+                    letter-spacing: -4px;
+                    line-height: 42px;
+                    font-weight: @font-weight__regular;
+                }
+                .button {
+                    font-size: 25px;
+                    line-height: 1px;
+                }
+            }
+        }
+
+        .banner3 .banner-text {
+            max-width: 160px;
+            h2 {
+                font-size: 45px;
+                letter-spacing: -4px;
+                line-height: 35px;
+                font-weight: @font-weight__regular;
+            }
+            .button {
+                padding-left: 28%;
+            }
+        }
+
+    }
+
+    .banner-4 {
+        .banner-text {
+            width: 87%;
+            h2 {
+                font-size: 40px;
+                letter-spacing: -3px;
+                line-height: 28px;
+                float: left;
+            }
+            .button {
+                min-width: 95px;
+                font-size: 21px;
+                letter-spacing: -1px;
+                line-height: 28px;
+                float: right;
+                margin-left: 0;
+            }
+        }
+    }
 }
 
 .media-width(@extremum, @break) when (@extremum = 'max') and (@break = @screen__s) {
@@ -680,7 +784,7 @@
         .item {
             width: 100%/5;
             p {
-                font-size: 15px;
+                font-size: 25px;
                 letter-spacing: -1px;
             }
         }
