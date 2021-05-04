@@ -17,11 +17,12 @@
 
         .column.main {
             &:extend(.abs-add-box-sizing all);
-            .lib-css(padding-bottom, @indent__xl);
+            //.lib-css(padding-bottom, @indent__xl);
             .lib-vendor-prefix-flex-basis(auto);
             .lib-vendor-prefix-flex-grow(1);
             .lib-vendor-prefix-order(1);
             width: 100%;
+            margin-bottom: -1px;
         }
 
         .sidebar-main {
@@ -81,7 +82,8 @@
     .block.category.event,
     .top-container,
     .page-main,
-    .service-container {
+    .service-container,
+    .news-container {
         box-sizing: border-box;
         margin-left: auto;
         margin-right: auto;

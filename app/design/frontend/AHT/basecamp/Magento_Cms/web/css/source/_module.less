@@ -147,7 +147,84 @@
             }
         }
     }
+
+    .best-sell {
+        margin: 0 -11px;
+        &__text {
+            margin-top: 40px;
+            text-align: center;
+            margin-left: 2.2%;
+            &--big {
+                .lib-font-size(24);
+                font-weight: @font-weight__bold;
+
+            }
+
+            &--small {
+                margin-top: 4px;
+                margin-left: 2.2%;
+                .lib-font-size(20);
+                font-weight: @font-weight__regular;
+            }
+        }
+
+        &__list {
+            margin-top: 32px;
+            
+            // .product-items {
+            //     .product-item {
+            //         margin-right: 15px;
+            //     }
+            // }
+        }
+    }
+
+    .news-wrapper {
+        background-color: @color-white-dark-smoke;
+        width: 100vw;
+        position: relative;
+        left: 50%;
+        right: 50%;
+        margin-left: -50vw;
+        margin-right: -50vw;
+        padding-bottom: 10px;
+        .news-container {
+            padding: 0 13px;
+        }
+        .news-title {
+            text-align: center;
+            font-weight: @font-weight__bold;
+            .lib-font-size(24);
+            padding: 30px 0;
+        }
+        .news-content {
+            .lib-vendor-prefix-display(flex);
+            .lib-css(justify-content, space-between, 1);
+
+            .news-2, 
+            .news-3 {
+                width: 24%;
+
+                &__text {
+                    &--big {
+                        .lib-font-size(20);
+                        font-weight: @font-weight__bold;
+                    }
+
+                    &--small {
+                        .lib-font-size(16);
+                    }
+
+                    a {
+                        .lib-font-size(14);
+                    }
+                }
+            }
+
+        }
+    }
 }
+
 
 //
 //  Dekstop large
@@ -272,6 +349,8 @@
             }
         }
     }
+
+    
 }
 
 .media-width(@extremum, @break) when (@extremum = 'min') and (@break = @screen__l) {
