@@ -3,6 +3,9 @@
 //  _____________________________________________
 
 & when (@media-common = true) {
+    .slick-slide {
+        padding: 7px;
+    }
     .banner-text {
         position: absolute;
         h2 {
@@ -27,16 +30,21 @@
 
     .large-banner {
         position: relative;
+        img {
+            width: 100%;
+        }
         .banner-text {
             top: 47%;
-            left: 20%;
+            left: 18.5%;
             .lib-css(transform, translate(0, -50%), 1);
         }
     }
 
     .brand {
-        margin-left: auto;
+        width: fit-content;
+        margin-left: 6%;
         margin-right: auto;
+        margin-top: -3px;
     }
 
     .categories {
@@ -44,7 +52,6 @@
         margin: 0 -7px;
         .item {
             position: relative;
-            padding: 7px;
             p {
                 position: absolute;
                 top: 50%;
@@ -60,18 +67,18 @@
 
     .banner-2 {
         display: flex;
-        margin: 0 -10px;
+        margin: 13px -10px 5px -10px;
         .banner1,
         .banner2 {
             position: relative;
-            padding: 10px;
+            padding: 0 10px;
             .banner-text {
             }
         }
 
         .banner1 .banner-text {
-            top: 15%;
-            left: 8%;
+            top: 17%;
+            left: 7%;
         }
 
         .banner2 .banner-text {
@@ -111,15 +118,21 @@
 
         .banner3 .banner-text {
             top: 43%;
-            left: 18%;
+            left: 13%;
+            letter-spacing: -1px;
+
+            .button {
+                margin-top: -2%;
+            }
         }
     }
 
     .banner-4 {
         position: relative;
+        margin-top: 12px;
         .banner-text {
-            top: 20%;
-            left: 6%;
+            top: 25%;
+            left: 7%;
             h2 {
                 .lib-rotate(-2deg);
             }
@@ -132,11 +145,96 @@
                 a {
                     color: @color-white;
                 }
-                .lib-rotate(-2deg);
+                .lib-rotate(-5deg);
             }
         }
     }
+
+    .best-sell {
+        margin: 0 -18px;
+        &__text {
+            margin-top: 40px;
+            text-align: center;
+            margin-left: 2.2%;
+            &--big {
+                .lib-font-size(24);
+                font-weight: @font-weight__bold;
+
+            }
+
+            &--small {
+                margin-top: 4px;
+                margin-left: 2.2%;
+                .lib-font-size(20);
+                font-weight: @font-weight__regular;
+            }
+        }
+
+        &__list {
+            margin-top: 32px;
+            
+            // .product-items {
+            //     .product-item {
+            //         margin-right: 15px;
+            //     }
+            // }
+        }
+    }
+
+    .news-wrapper {
+        background-color: @color-white-dark-smoke;
+        width: 100vw;
+        position: relative;
+        left: 50%;
+        right: 50%;
+        margin-left: -50vw;
+        margin-right: -50vw;
+        padding-bottom: 10px;
+        .news-container {
+            padding: 0 13px;
+        }
+        .news-title {
+            text-align: center;
+            font-weight: @font-weight__bold;
+            .lib-font-size(24);
+            padding: 30px 0;
+        }
+        .news-content {
+            .lib-vendor-prefix-display(flex);
+
+            .news-2, 
+            .news-3 {
+                //width: 24%;
+                .lib-vendor-prefix-display(flex);
+                .lib-vendor-prefix-flex-direction(column);
+
+                &__text {
+                    &--big {
+                        .lib-font-size(20);
+                        font-weight: @font-weight__bold;
+                        line-height: 25px;
+                        padding-top: 3px;
+                        padding-right: 16px; 
+                    }
+
+                    &--small {
+                        .lib-font-size(16);
+                        padding-top: 21px;
+                        line-height: 19px;
+                        padding-bottom: 20px;
+                    }
+
+                    a {
+                        color: @color-black;
+                        .lib-font-size(14);
+                    }
+                }
+            }
+
+        }
+    }
 }
+
 
 //
 //  Dekstop large
@@ -150,12 +248,13 @@
                 font-size: 143px;
                 letter-spacing: -4px;
                 line-height: 110px;
+                margin-bottom: 13px;
             }
             .button {
                 font-size: 56px;
                 letter-spacing: -1px;
                 line-height: 31px;
-                padding-left: 21.6%;
+                padding-left: 27.6%;
             }
         }
     }
@@ -230,6 +329,13 @@
 
         .banner2 .banner-text {
             max-width: 270px;
+
+            .button {
+                margin-right: -10%;
+                margin-left: 12%;
+                letter-spacing: -1px;
+                margin-top: -2%;
+            }
         }
 
         .banner3 .banner-text {
@@ -248,10 +354,26 @@
                 max-width: 242px;
                 font-size: 56px;
                 letter-spacing: -1px;
-                line-height: 55px;
+                line-height: 57px;
+                padding: 0 2px;
             }
         }
     }
+
+    .news-wrapper {
+        .news-content {
+            .lib-css(justify-content, space-between, 1);
+
+            .news-1 {
+                .lib-visually-hidden-reset();
+            }
+            .news-2, 
+            .news-3 {
+                width: 24%;
+            }  
+        }
+    }
+      
 }
 
 .media-width(@extremum, @break) when (@extremum = 'min') and (@break = @screen__l) {
@@ -276,7 +398,7 @@
         .item {
             width: 100%/5;
             p {
-                font-size: 28px;
+                font-size: 35px;
                 letter-spacing: -1px;
             }
         }
@@ -364,6 +486,8 @@
             }
         }
     }
+
+    
 }
 
 //
@@ -392,7 +516,7 @@
         .item {
             width: 100%/5;
             p {
-                font-size: 20px;
+                font-size: 25px;
                 letter-spacing: -1px;
             }
         }
@@ -480,6 +604,24 @@
             }
         }
     }
+
+    .news-wrapper {
+        .news-content {
+            .lib-css(justify-content, space-evenly, 1);
+            .news-1 {
+                .lib-visually-hidden();
+            }
+            .news-2, 
+            .news-3 {
+                width: 45%;
+                &__img {
+                    img {
+                        width: 100%;
+                    }
+                }
+            }  
+        }
+    }
 }
 
 //
@@ -487,7 +629,137 @@
 //  _____________________________________________
 
 .media-width(@extremum, @break) when (@extremum = 'max') and (@break = @screen__m) {
+    .news-wrapper {
+        .news-container {
+            padding: 0 20px;
+        }
+        .news-content {
+            .news-1 {
+                .lib-visually-hidden();
+            }
+            .lib-vendor-prefix-flex-direction(column);
+            .news-2, 
+            .news-3 {
+                width: 100%;
+                &__img {
+                    img {
+                        width: 100%;
+                    }
+                }
 
+                &__text {
+                    &--small {
+                        .lib-visually-hidden();
+                    }
+                }
+
+                padding-bottom: 15px;
+            }  
+        }
+    }
+.large-banner {
+        .banner-text {
+            max-width: 127px;
+            h2 {
+                font-size: 44px;
+                letter-spacing: -4px;
+                line-height: 34px;
+            }
+            .button {
+                font-size: 24px;
+                letter-spacing: -1px;
+                line-height: 10px;
+                padding-left: 21.6%;
+            }
+        }
+    }
+
+    .categories {
+        .item {
+            width: 100%/5;
+            p {
+                font-size: 25px;
+                letter-spacing: -1px;
+            }
+        }
+    }    
+
+    .banner-2 {
+        .banner1,
+        .banner2 {
+            width: 100%/2;
+            .banner-text {
+                max-width: 200px;
+                h2 {
+                    font-size: 50px;
+                    line-height: 50px;
+                    letter-spacing: -4px;
+                    font-weight: @font-weight__regular;
+                }
+                .button {
+                    font-size: 28px;
+                    letter-spacing: -1px;
+                    line-height: 12px;
+                    font-weight: @font-weight__regular;
+                }
+            }
+        }
+    }
+
+    .banner-3 {
+        .banner1,
+        .banner2,
+        .banner3 {
+            width: 100%/3;
+            .banner-text {
+                max-width: 118px;
+                h2 {
+                    font-size: 54px;
+                    letter-spacing: -4px;
+                    line-height: 42px;
+                    font-weight: @font-weight__regular;
+                }
+                .button {
+                    font-size: 25px;
+                    line-height: 1px;
+                }
+            }
+        }
+
+        .banner3 .banner-text {
+            max-width: 160px;
+            h2 {
+                font-size: 45px;
+                letter-spacing: -4px;
+                line-height: 35px;
+                font-weight: @font-weight__regular;
+            }
+            .button {
+                padding-left: 28%;
+            }
+        }
+
+    }
+
+    .banner-4 {
+        .banner-text {
+            width: 87%;
+            h2 {
+                font-size: 40px;
+                letter-spacing: -3px;
+                line-height: 28px;
+                float: left;
+            }
+            .button {
+                min-width: 95px;
+                font-size: 21px;
+                letter-spacing: -1px;
+                line-height: 28px;
+                float: right;
+                margin-left: 0;
+            }
+        }
+    }
 }
 
 .media-width(@extremum, @break) when (@extremum = 'max') and (@break = @screen__s) {
@@ -512,7 +784,7 @@
         .item {
             width: 100%/5;
             p {
-                font-size: 15px;
+                font-size: 25px;
                 letter-spacing: -1px;
             }
         }
@@ -596,4 +868,6 @@
             }
         }
     }
+
+    
 }
