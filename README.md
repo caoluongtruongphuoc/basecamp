@@ -1,2 +1,2 @@
 # basecamp
-test : la` nha'nh chi'nh :D
+nhánh test là đầy đủ
