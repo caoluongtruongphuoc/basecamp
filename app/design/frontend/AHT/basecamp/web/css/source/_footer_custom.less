@@ -149,6 +149,9 @@
                             color: @color-white;
                             text-decoration: none;
                         }
+                        a:hover {
+                            text-decoration: underline;
+                        }
                         a.a-icon {
                             color: @color-black;
                         }
@@ -190,6 +193,9 @@
 
                 &:nth-child(2) {
                     width: 22.13%;
+                    .pay-img {
+                        padding-top: 200px;
+                    }
                 }
 
                 &:nth-child(3) {
@@ -219,4 +225,21 @@
             }
         }
     }
+}
+
+
+.media-width(@extremum, @break) when (@extremum = 'min') and (@break = @screen__l) {
+    .footer.content {
+    
+        .footer-desktop {
+            .column-custom {
+                &:nth-child(2) {
+                    .pay-img {
+                        padding-top: 80px;
+                    }
+                }
+            }
+        }
+    }
+
 }
