@@ -30,8 +30,13 @@
 
     .large-banner {
         position: relative;
+        background-color: @color-f0;
         img {
             width: 100%;
+        }
+        a.image-link {
+            line-height: 0;
+            font-size: 0;
         }
         .banner-text {
             top: 47%;
@@ -41,8 +46,7 @@
     }
 
     .brand {
-        width: fit-content;
-        margin-left: 6%;
+        margin-left: auto;
         margin-right: auto;
         margin-top: -3px;
     }
@@ -151,7 +155,6 @@
     }
 
     .best-sell {
-        margin: 0 -18px;
         &__text {
             margin-top: 40px;
             text-align: center;
